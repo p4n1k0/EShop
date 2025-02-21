@@ -19,7 +19,8 @@ namespace EShop.Models
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
-            // Sua lógica aqui
+            mb.Entity<Client>().HasKey(key => key.ClientIdentity);
+            base.OnModelCreating(mb);
         }
     }
 }
