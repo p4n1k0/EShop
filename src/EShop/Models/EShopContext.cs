@@ -4,8 +4,8 @@ namespace EShop.Models
 {
     public class EShopContext : DbContext
     {
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<Client> Clients { get; set; } = null!;
+        public DbSet<Order> Orders { get; set; } = null!;
 
         public EShopContext(DbContextOptions<EShopContext> options)
              : base(options)
